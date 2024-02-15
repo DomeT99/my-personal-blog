@@ -1,0 +1,58 @@
+---
+import linkedinPostsCategories from "../../data/linkedin-posts-categories.json";
+import linkedinPosts from "../../data/linkedin-posts.json";
+import Hero from "../../components/common/Hero.astro";
+import PostList from "../../components/linkedin/PostList.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const { slug } = Astro.params;
+
+export const getStaticPaths = () => {
+  return linkedinPostsCategories.map((category) => ({
+    params: {
+      slug: category.slug,
+    },
+  }));
+};
+
+const category = linkedinPostsCategories.find(
+  (category) => category.slug === slug
+);
+
+if (!category) {
+  return {
+    status: 404,
+  };
+}
+const posts = linkedinPosts
+  .filter((post) => post.category === category.slug)
+  .reverse();
+---
+
+<BaseLayout
+  pageTitle={category.title}
+  pageDescription={category.description}
+>
+  <section class="container mt-6 mb-6">
+    <a class="quinary-color is-size-6-mobile ml-4" href="/linkedin"
+      >👈&nbsp;<u class="is-size-6-mobile">Return to categories</u></a
+    >
+  </section>
+  <section class="has-text-centered mt-6">
+    <Hero
+      title={category.title}
+      titleSize="is-size-2"
+      titleSizeMobile="is-size-3"
+      subtitle={category.description}
+      subtitleSize="is-size-4"
+      subtitleSizeMobile="is-size-5"
+    />
+  </section>
+  <section class="container mx-auto mt-6 mb-6 fade-in">
+    <div class="columns is-multiline">
+      <div class="column is-10 is-offset-1">
+        <PostList posts={posts} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

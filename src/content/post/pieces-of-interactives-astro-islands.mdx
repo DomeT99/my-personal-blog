@@ -1,0 +1,51 @@
+---
+title: "Pieces of interactives: Astro Islands ☄️"
+description: Astro's philosophy is centered around not using JavaScript, but it may happen in some situations that you need to use it to give interactivity to certain elements of the page.
+date: 2024-01-24
+devLink: https://dev.to/dvalin99/pieces-of-interactives-astro-islands-4nnb
+mediumLink: https://medium.com/@domenicotenace/pieces-of-interactives-astro-islands-%EF%B8%8F-6efc1e7af49c
+---
+
+## Overview
+
+Astro's philosophy is centered around not using JavaScript, but it may happen in some situations that you need to use it to give interactivity to certain elements of the page.
+In this article we will see what Astro Islands are and how they work.
+
+<br />
+Let's start🤙🏻
+
+---
+
+## What are Astro Islands?
+
+In **Astro**, an "island" refers to any interactive user interface component on the page. An island can be thought of as an interactive widget floating in a sea of ​​otherwise static, lightweight, server-rendered HTML.
+An island always runs alone from the other islands on the page, in which multiple islands can exist. Islands can share statehood with each other.
+Unlike SPAs that load all client-side JavaScript, Astro Islands use a technique also known as **partial** or **selective hydration**.
+Astro support multiple frontend frameworks for create the islands like Vue, React, Preact, Svelte and SolidJS.
+
+## How to create and Island
+
+By default, Astro render the component without JavaScript, only HTML and CSS:
+
+```html
+<RandomVueComponent />
+```
+
+To make a component interactive, you need a client directive:\*. Astro then automatically creates and bundles your client-side JavaScript for optimized performance.
+
+```html
+<RandomVueComponent client:load />
+```
+
+## Benefits
+
+The main advantage of the Astro Islands is performance: Astro render static HTML and JavaScript is only loaded for the individual components that need it.
+Another benefit is parallel loading: if there are multiple islands on the page, no islands block the loading of the others but they will be loaded in parallel (and when necessary).
+
+## Conclusion
+
+Astro Islands are isolated pieces of code that provide interactivity to an Astro page.
+Major frontend frameworks such as Vue and React are supported. This type of approach provides greater performance without affecting the user experience. Make good use of it!
+
+<br />
+Happy coding!✨

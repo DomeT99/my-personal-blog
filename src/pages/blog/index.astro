@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogCard from "../../components/blog/BlogCard.astro";
+import { fetchCollection } from "../../utils/blog";
+
+const posts = await fetchCollection();
+posts.sort((a: any, b: any) => b.data.date - a.data.date);
+---
+
+<BaseLayout
+  pageTitle="Blog"
+  pageDescription="I write articles about the technologies I use the most"
+  heroTitle="Blog"
+  heroDescription="I write articles about the technologies I use the most and share my experiences!"
+>
+  <section class="has-text-centered container mx-auto mt-6 mb-6">
+    <div class="columns is-multiline">
+      <div class="column is-12">
+        {
+          posts.map((post) => (
+            <div class="mb-6 fade-in">
+              <BlogCard
+                title={post.data.title}
+                date={post.data.date}
+                description={post.data.description}
+                slug={"/blog/" + post.slug}
+                devLink={post.data.devLink}
+                mediumLink={post.data.mediumLink}
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

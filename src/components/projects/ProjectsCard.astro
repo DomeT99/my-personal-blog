@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  title: string;
+  description: string;
+  technologiesTags: string[];
+  url?: string;
+  githubRepository?: string;
+}
+
+const { title, url, description, technologiesTags, githubRepository } =
+  Astro.props;
+---
+
+<div class="card">
+  <div class="card-content min-25-vh">
+    <div class="columns is-variable is-5-desktop is-6-mobile is-mobile">
+      <div class="column is-12 has-text-centered">
+        <h6 class="is-size-5-desktop is-size-6-tablet is-size-5-mobile">
+          {title}
+        </h6>
+      </div>
+    </div>
+
+    <div class="content min-10-vh">
+      <p>{description}</p>
+    </div>
+    <div class="content">
+      <div class="tags">
+        {technologiesTags.map((tag) => <span class="tag">{tag}</span>)}
+      </div>
+    </div>
+  </div>
+  <footer class="card-footer">
+    {
+      url && (
+        <a href={url}>
+          <Icon class="ml-1 mr-1 mt-4" size={28} name="ph:link-bold" />
+        </a>
+      )
+    }
+    {
+      githubRepository && (
+        <a href={githubRepository}>
+          <Icon class="ml-1 mr-1 mt-4" size={28} name="fa-brands:github" />
+        </a>
+      )
+    }
+  </footer>
+</div>

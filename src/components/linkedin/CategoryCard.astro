@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+}
+
+const { title, description, slug } = Astro.props;
+---
+
+<div class="card">
+  <div class="card-content">
+    <div class="columns is-variable is-5-desktop is-6-mobile is-mobile">
+      <div class="column is-12 has-text-centered">
+        <h6 class="is-size-5-desktop is-size-6-tablet is-size-5-mobile">
+          {title}
+        </h6>
+      </div>
+    </div>
+
+    <div class="content min-6-vh">
+      <p>{description}</p>
+    </div>
+    <footer class="card-footer">
+      <a class="mt-4" href={`/linkedin/${slug}`}
+        ><h6 class="primary-color">Read more</h6></a
+      >
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Vue",
+    "description": "Vue the progressive JavaScript framework described in these posts",
+    "slug": "vue"
+  },
+  {
+    "title": "Astro",
+    "description": "Astro: the new frontier of Frontend Frameworks",
+    "slug": "astro"
+  },
+  {
+    "title": "Articles",
+    "description": "Post where I announce my articles",
+    "slug": "articles"
+  },
+  {
+    "title": "Projects",
+    "description": "My projects that I am working on",
+    "slug": "projects"
+  },
+  {
+    "title": "Study",
+    "description": "I discover and study technologies",
+    "slug": "study"
+  },
+  {
+    "title": "Open Source",
+    "description": "Open Source and everything related to it",
+    "slug": "open-source"
+  }
+]

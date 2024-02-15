@@ -1,0 +1,22 @@
+[
+  {
+    "label": "HOME",
+    "url": "/"
+  },
+  {
+    "label": "BLOG",
+    "url": "/blog"
+  },
+  {
+    "label": "OPEN SOURCE",
+    "url": "/opensource"
+  },
+  {
+    "label": "PROJECTS",
+    "url": "/projects"
+  },
+  {
+    "label": "LINKEDIN POST",
+    "url": "/linkedin"
+  }
+]

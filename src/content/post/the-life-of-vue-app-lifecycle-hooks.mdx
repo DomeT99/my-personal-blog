@@ -1,0 +1,59 @@
+---
+title: "The life of Vue app: Lifecycle Hooks♻️"
+description: In Vue there are many steps of app's lifecycle, each Vue component instance goes through a series of initialization steps when it's created.
+date: 2023-10-17
+devLink: https://dev.to/dvalin99/the-life-of-vue-app-lifecycle-hooks-34j
+mediumLink: https://medium.com/@domenicotenace/the-life-of-vue-app-lifecycle-hooks-%EF%B8%8F-1ba8f1a6c720
+---
+
+## Overview
+
+In Vue there are many steps of app's lifecycle, each Vue component instance goes through a series of initialization steps when it's created.
+These steps called Lifecycle Hooks.
+In this article will explains what are Lifecycle Hooks and how to use it.
+<br/>
+Let's start! 🤙
+
+## What are Lifecycle Hooks?
+
+Lifecycle Hooks are a series of initialization steps where it possbile to set up data observation, compile the template, mount the instance to the DOM, and update the DOM when data changes.
+
+```javascript
+<script setup>
+  import {onMounted} from 'vue' onMounted(() => console.log("Hello mounted
+  component!"))
+</script>
+```
+
+In the above example the use of the `onMounted()` Hook is shown.
+When the component is mounted, the code inside the callback given to `onMounted()` will be executed and print the message to the console.
+
+---
+
+## Diagram
+
+<section style="display:flex; justify-content:center;">
+  ![LifecycleDiagram.png](https://vuejs.org/assets/lifecycle.16e4c08e.png)
+</section>
+<br />
+<br />
+
+The above image is the official Vue diagram of Lifecycle Hooks where are
+illustrate the phases of Lifecycle:
+
+1. `onBeforeMount()`, when this hook is called, the component has finished setting up its reactive state, but no DOM nodes have been created yet. It is about to execute its DOM render effect for the first time.
+2. `onMounted()`: this hook is used for performing side effects that need access to the component's rendered DOM, or for limiting DOM-related code to the client in a server-rendered application.
+3. `onBeforeUpdate()`: this hook can be used to access the DOM state before Vue updates the DOM.
+4. `onUpdated()`: this hook is called after DOM update of the component, which can be caused by different state changes, because multiple state changes can be batched into a single render cycle for performance reasons.
+5. `onBeforeUnmount()`: when this hook is called, the component instance is still fully functional.
+6. `onUnmounted()`: use this hook to clean up manually created side effects such as timers, DOM event listeners or server connections.
+
+`onBeforeMount()`, `onBeforeUpdate()`, `onBeforeUnmount()` and `onUnmounted()` are not called during server-side rendering.
+
+## Conclusion
+
+Lifecycle Hooks are very powerful features to take advantage of when implementing components in a Vue application to manipulate the DOM, clean up dirty data, etc.
+It is recommended to make good use of it.
+<br/>
+
+Happy coding!✨

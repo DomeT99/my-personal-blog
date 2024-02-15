@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CategoryCard from "../../components/linkedin/CategoryCard.astro";
+import linkedinPostsCategories from "../../data/linkedin-posts-categories.json";
+---
+
+<BaseLayout
+  pageTitle="Linkedin Posts"
+  pageDescription="This section is dedicated to my Linkedin posts!"
+  heroTitle="Linkedin Posts"
+  heroDescription="This section is dedicated to my Linkedin posts!"
+>
+  <section class="columns is-multiline mx-auto mt-6 mb-6">
+    {
+      linkedinPostsCategories.map((category) => (
+        <div class="column is-one-third-desktop is-6-tablet fade-in">
+          <CategoryCard
+            title={category.title}
+            description={category.description}
+            slug={category.slug}
+          />
+        </div>
+      ))
+    }
+  </section>
+</BaseLayout>

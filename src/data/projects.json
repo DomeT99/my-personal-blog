@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Ella Ink Piercer - Tattoo and Piercing",
+    "description": "Showcase site created for a professional body artist in the area. The project was created using the popular CMS WordPress.",
+    "technologiesTags": ["WordPress"],
+    "url": "https://ellainkpiercer.it/"
+  },
+  {
+    "title": "Astro Minimal 😎",
+    "description": "Astro Minimal is an open source blog template designed and developed using Astro and the Bulma CSS framework 🚀",
+    "technologiesTags": ["Astro", "JavaScript", "TypeScript"],
+    "url": "https://demo-astro-minimal.netlify.app/",
+    "githubRepository": "https://github.com/DomeT99/astro-minimal"
+  },
+  {
+    "title": "Easy Kit Component 🛠",
+    "description": "Easy Kit Component is a simple components kit designed for Vue 3 application!",
+    "technologiesTags": ["Vue", "JavaScript", "TypeScript"],
+    "url": "https://easykitcomponent.netlify.app/",
+    "githubRepository": "https://github.com/DomeT99/easy-kit-component"
+  }
+]

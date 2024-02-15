@@ -1,0 +1,158 @@
+---
+title: "The pieces of UI: Components 🧩"
+description: Components allow us to divide the user interface into independent, reusable parts, each independent of the other and they are considered the basis of an interface built with Vue.
+date: 2023-11-28
+devLink: https://dev.to/dvalin99/the-pieces-of-ui-components-3ija
+mediumLink: https://medium.com/@domenicotenace/the-pieces-of-ui-components-b5d625598414
+---
+
+## Overview
+
+Components allow us to divide the user interface into independent, reusable parts, each independent of the other and they are considered the basis of an interface built with Vue.
+In this article we will see what Components are and how they are used in a Vue app.
+
+<br />
+Let's start! 🤙
+
+---
+
+## What is a Component?
+
+A Component is a reusable and independent portion of code that defines a specific element of the interface.
+A Vue Component, internally, encapsulates structure, style and logic (HTML,CSS,JavaScript).
+Components are one of Vue's strong points, thanks to their flexibility and the possibility of using them in different points of the software.
+
+## Defining and using a Component
+
+We typically define each Vue component in a dedicated file using the `.vue` extension for create it, in this way:
+
+```html
+<script setup>
+  import { ref } from "vue";
+
+  const count = ref(0);
+</script>
+
+<template>
+  <button @click="count++">You clicked me {{ count }} times.</button>
+</template>
+```
+
+The example above defines a simple button component that when clicked, will increment a counter.
+To use a child component, we need to import it in the parent component:
+
+```html
+<script setup>
+  import ButtonCounter from "./ButtonCounter.vue";
+</script>
+
+<template>
+  <h1>Hello button!</h1>
+  <ButtonCounter />
+</template>
+```
+
+Now, will render a button in the page.
+We can also use more than one on the page in this way:
+
+```html
+<template>
+  <h1>Hello buttons!</h1>
+  <ButtonCounter />
+  <ButtonCounter />
+  <ButtonCounter />
+</template>
+```
+
+Now, each button is an instance in itself, so when you click one of them, its counter will be incremented.
+
+> It's also possible to globally register a component, making it available to all components in a given app without having to import it.
+
+---
+
+## What are Props?
+
+Props are custom attributes you can register on a component.
+Let's take the following Component as an example:
+
+```html
+<script setup>
+  defineProps(["label"]);
+</script>
+
+<template>
+  <button>{{ label }}</button>
+</template>
+```
+
+`defineProps` is a compile-time macro that is only available inside `<script setup>` and does not need to be explicitly imported. Declared props are automatically exposed to the template. `defineProps` also returns an object that contains all the props passed to the component, so that we can access them in JavaScript if needed:
+
+```javascript
+const props = defineProps(["label"]);
+console.log(props.label);
+```
+
+Once a prop is registered, you can pass data to it as a custom attribute, like this:
+
+```html
+<template>
+  <h1>Hello buttons!</h1>
+  <ButtonCounter label="Increment" />
+  <ButtonCounter label="Decrement" />
+</template>
+```
+
+Let's define a more practical example:
+
+```html
+<script setup>
+  import { ref } from "vue";
+
+  const posts = ref([
+    { id: 1, title: "Data binding: Directives 🫰" },
+    { id: 2, title: "Reactivity: ref() vs reactive() 👊" },
+    { id: 3, title: "Conditional rendering: v-if vs v-show 🫴" },
+  ]);
+</script>
+
+<template>
+  <BlogPost v-for="post in posts" :key="post.id" :title="post.title" />
+</template>
+```
+
+Suppose that `BlogPost` is a Component defined in another file and takes `title` as a prop.
+In the above example we see an array of posts in a [v-for](https://dev.to/dvalin99/display-your-list-v-for-4m8c) and the `v-bind` is applied on the title property.
+`v-bind` is used to pass dynamic prop values. This is especially useful when you don't know the exact content you're going to render ahead of time.
+
+---
+
+## Slots
+
+Let's take the `ButtonCounter` component as an example: has a prop called `label` that defines the text inside it.
+The same Component can be rewritten using `slot` and obtaining the same result:
+
+```html
+<template>
+  <button><slot /></button>
+</template>
+```
+
+And when called:
+
+```html
+<script setup>
+  import ButtonCounter from "./ButtonCounter.vue";
+</script>
+
+<template>
+  <h1>Hello button!</h1>
+  <ButtonCounter>Increment</ButtonCounter>
+</template>
+```
+
+## Conclusion
+
+Components are fundamental for build app Vue. Their encapsulation of functionality, reusability, and ease of integration make them a powerful tool for building scalable and maintainable web applications.
+
+<br />
+Happy coding!✨

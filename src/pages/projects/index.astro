@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"; 
+import ProjectsCard from "../../components/projects/ProjectsCard.astro";
+import projects from "../../data/projects.json";
+---
+
+<BaseLayout
+  pageTitle="Projects"
+  pageDescription="This section is dedicated to my personal projects!"
+  heroTitle="Projects"
+  heroDescription="This section is dedicated to my personal projects!"
+>
+  <section class="columns is-multiline mx-auto mt-6 mb-6">
+    {
+      projects.map((project) => {
+        return (
+          <div class="column is-one-third-desktop is-6-tablet fade-in">
+            <ProjectsCard
+              title={project.title}
+              description={project.description}
+              url={project.url}
+              technologiesTags={project.technologiesTags}
+              githubRepository={project.githubRepository}
+            />
+          </div>
+        );
+      })
+    }
+  </section>
+</BaseLayout>

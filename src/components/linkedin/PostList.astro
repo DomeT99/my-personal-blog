@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon";
+
+interface Props {
+  posts: {
+    title: string;
+    category: string;
+    url: string;
+  }[];
+}
+
+const { posts } = Astro.props;
+---
+
+<div class="card">
+  <div class="card-content">
+    <div class="content min-6-vh">
+      <ul>
+        {
+          posts.map((post) => (
+            <li class="mt-4">
+              <Icon size={24} name="fa-brands:linkedin" />
+              <a class="is-size-6-mobile" href={post.url}>
+                {post.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
