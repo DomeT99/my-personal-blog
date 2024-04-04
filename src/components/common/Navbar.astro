@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 import menuOptions from "../../data/menu-options.json";
+import SearchBoxOrama from "./SearchBoxOrama.vue";
 ---
 
 <script>
@@ -63,7 +64,7 @@ import menuOptions from "../../data/menu-options.json";
           );
         })
       }
-
+      <SearchBoxOrama client:visible />
       <Icon
         class="ml-4 mt-4 tertiary-color baseline-dark-mode pointer"
         size={34}
