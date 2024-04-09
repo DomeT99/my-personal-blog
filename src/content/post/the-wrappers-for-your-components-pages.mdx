@@ -1,0 +1,55 @@
+---
+title: "The wrappers for your Components: Pages 📃"
+description: Each website allows you to view so-called "web pages", so that you can interact or find information.
+date: 2024-04-10 
+---
+
+## Overview
+Each website allows you to view so-called "web pages", so that you can interact or find information. In this article, we're going to explore Astro Pages and how they work.
+<br />
+Let's start! 🤙
+
+---
+
+## What are Astro Pages?
+Astro Pages are files that are responsible for handling routing, data loading, and overall page layout for every page in your website.
+They live in the `src/pages/` subdirectory.
+
+```html
+---
+---
+<html lang="en">
+  <head>
+    <title>My Homepage</title>
+  </head>
+  <body>
+    <h1>Welcome to my website!</h1>
+  </body>
+</html>
+```
+The example above shows a very simple Astro Page template.
+A page must produce a full HTML document. If not explicitly included, Astro will add the necessary `<!DOCTYPE html>` declaration and `<head>` content to any `.astro` component located within `src/pages/` by default. You can opt-out of this behavior on a per-component basis by marking it as a partial page.
+
+
+## Astro Pages with Markdown
+All Markdown files within `src/pages/` are treated by Astro as pages of your final website. If the files are `.mdx` rather than `.md`, the end result will be the same.
+
+## Page Partials
+Partials are page components located within `src/pages/` that are not intended to render as full pages.
+Working closely with third-party frontend libraries, they can be considered alternatives to the [Astro Islands](https://dev.to/dvalin99/pieces-of-interactives-astro-islands-4nnb).
+To configure Page Partials, you need to export `const partial = true`, like following example:
+
+```html
+---
+export const partial = true;
+---
+
+<h1>This is partial page!</h1>
+```
+
+---
+ 
+## Conclusion
+Astro Pages are fundamental components for building a static website using Astro: easy to set up and versatile for all types of use.
+<br />
+Happy coding!✨

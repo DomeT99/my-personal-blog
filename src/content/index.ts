@@ -11,6 +11,7 @@ import * as scaffoldingVue from "./post/scaffolding-vue-3-projects-using-create-
 import * as vueHooks from "./post/the-life-of-vue-app-lifecycle-hooks.mdx";
 import * as vueComp from "./post/the-pieces-of-ui-components.mdx";
 import * as vueWatcher from "./post/track-your-variables-watchers.mdx";
+import * as astroPages from "./post/the-wrappers-for-your-components-pages.mdx";
 
 export const posts = [
   computedProps,
@@ -26,4 +27,5 @@ export const posts = [
   vueHooks,
   vueComp,
   vueWatcher,
+  astroPages,
 ];
