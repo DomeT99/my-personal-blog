@@ -223,5 +223,10 @@
     "url": "https://www.linkedin.com/posts/domenico-tenace_astrojs-javascript-article-activity-7183766414116192256-4-xg?utm_source=share&utm_medium=member_desktop",
     "title": "Astro Pages: the wrappers of your components",
     "category": "articles"
-  }
+  },
+    {
+      "url": "https://www.linkedin.com/posts/domenico-tenace_astrojs-frontenddev-javascript-activity-7185940741360078848-tTRI?utm_source=share&utm_medium=member_desktop",
+      "title": "Contributing file in Astro Minimal",
+      "category": "projects"
+    }
 ]
