@@ -12,6 +12,7 @@ import * as vueHooks from "./post/the-life-of-vue-app-lifecycle-hooks.mdx";
 import * as vueComp from "./post/the-pieces-of-ui-components.mdx";
 import * as vueWatcher from "./post/track-your-variables-watchers.mdx";
 import * as astroPages from "./post/the-wrappers-for-your-components-pages.mdx";
+import * as top3Library from "./post/top-3-vue-library-for-your-next-project.mdx";
 
 export const posts = [
   computedProps,
@@ -28,4 +29,5 @@ export const posts = [
   vueComp,
   vueWatcher,
   astroPages,
+  top3Library,
 ];
