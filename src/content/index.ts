@@ -13,6 +13,7 @@ import * as vueComp from "./post/the-pieces-of-ui-components.mdx";
 import * as vueWatcher from "./post/track-your-variables-watchers.mdx";
 import * as astroPages from "./post/the-wrappers-for-your-components-pages.mdx";
 import * as top3Library from "./post/top-3-vue-library-for-your-next-project.mdx";
+import * as astrolayouts from "./post/reusable-ui-structure-layout.mdx";
 
 export const posts = [
   computedProps,
@@ -30,4 +31,5 @@ export const posts = [
   vueWatcher,
   astroPages,
   top3Library,
+  astrolayouts,
 ];

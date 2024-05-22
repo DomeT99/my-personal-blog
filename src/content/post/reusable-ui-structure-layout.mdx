@@ -1,0 +1,142 @@
+---
+title: "Reusable UI structure: Layouts 💱"
+description: It may happen during development that you have to reuse the same components for the entire use of the application.
+date: 2024-05-22
+devLink: https://dev.to/dvalin99/a-reusable-ui-structure-layouts-5eh5
+mediumLink: https://javascript.plainenglish.io/a-reusable-ui-structure-layouts-b6cc78a20d93
+---
+
+## Overview
+
+It may happen during development that you have to reuse the same components for the entire use of the application.
+Therefore, without having to import components for each page, it is possible to create Components that act as wrappers: Layouts.
+In this article, we'll look at how to use them and how they perform in an Astro project.
+
+<br />
+Let's start! 🤙
+
+---
+
+## What are Layouts?
+
+Layouts are [Astro Components](https://dev.to/dvalin99/build-your-interface-in-astro-components-2gng) used to provide a reusable UI structure, such as a page template.
+The term _layout_ is used for components that provide common interface elements that are shared across pages, such as headers, navigation bars, and footers.
+They can accept props and import and use other components like any other Astro component. They can include UI frameworks, components, and client-side scripts.
+Layout components are commonly placed in a `src/layouts` directory in your project.
+
+```html
+---
+import Navbar from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Navbar title="{title}" />
+  </head>
+  <body>
+    <h1>{title}</h1>
+    <article>
+      <slot />
+    </article>
+    <footer />
+  </body>
+</html>
+```
+
+`<slot />` tag is important because it is the point where the content will be "injected".
+
+```html
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home Page">
+  <p>Hello from home page!</p>
+</BaseLayout>
+```
+
+## Markdown layouts
+
+Layouts are especially useful for Markdown and MDX pages which otherwise would not have any page formatting.
+Astro provides a special property called `layout` to specify which `.astro` component to use as the page layout.
+
+In general, a tipical Markdown layout includes:
+
+- The `frontmatter` prop to access the Markdown or MDX page’s frontmatter and other data.
+
+- A default `<slot />` to inject the contents.
+
+```md
+---
+layout: ../layouts/BaseLayout.astro
+title: "A reusable UI structure: Layouts 💱"
+author: "Domenico Tenace"
+date: "23 Jun 2024"
+---
+
+This is my new article!
+```
+
+```html
+---
+const { frontmatter } = Astro.props;
+---
+
+<html>
+  <head>
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <h1>{frontmatter.title} by {frontmatter.author}</h1>
+    <slot />
+    <p>Written on: {frontmatter.date}</p>
+  </body>
+</html>
+```
+
+## Importing Layouts Manually (MDX)
+You may need to pass information to your MDX layout that does not exist in your frontmatter. In this case, you can instead import and use a `<Layout />` component and pass it props like any other component:
+
+```md
+---
+layout: ../../layouts/BaseLayout.astro
+title: "My first MDX post"
+publishDate: "23 Jun 2024"
+---
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export function fancyJsHelper() {
+return "Try doing that with YAML!";
+}
+
+<BaseLayout title={frontmatter.title} fancyJsHelper={fancyJsHelper}>
+  Welcome to my new Astro blog, using MDX!
+</BaseLayout>
+```
+
+And now, your values are available to you through Astro.props in your layout, and your MDX content will be injected into the page where your `<slot />` component is written:
+
+```html
+---
+const { title, fancyJsHelper } = Astro.props;
+---
+
+<h1>{title}</h1>
+<slot />
+<p>{fancyJsHelper()}</p>
+```
+
+---
+
+## Conclusion
+
+Astro Layouts allow the reuse of basic components that should be recalled for each page of our site. They are also very useful when used in `.md` or `.mdx` files.
+<br />
+Happy coding!✨
+
+---
