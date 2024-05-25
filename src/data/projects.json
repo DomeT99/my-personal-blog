@@ -18,5 +18,11 @@
     "technologiesTags": ["Vue", "JavaScript", "TypeScript"],
     "url": "https://easykitcomponent.netlify.app/",
     "githubRepository": "https://github.com/DomeT99/easy-kit-component"
+  },
+  {
+    "title": "Alex Hantari - From my mind to your eyes",
+    "description": "Showcase site created for a professional photographer and art director. The project was created using the popular CMS WordPress.",
+    "technologiesTags": ["WordPress"],
+    "url": "https://alexhantari.it/"
   }
 ]

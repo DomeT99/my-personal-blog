@@ -224,25 +224,29 @@
     "title": "Astro Pages: the wrappers of your components",
     "category": "articles"
   },
-    {
-      "url": "https://www.linkedin.com/posts/domenico-tenace_astrojs-frontenddev-javascript-activity-7185940741360078848-tTRI?utm_source=share&utm_medium=member_desktop",
-      "title": "Contributing file in Astro Minimal",
-      "category": "projects"
-    },
-    {
-      "url": "https://www.linkedin.com/posts/domenico-tenace_vuejs-javascript-webdev-activity-7190984475680423936--vwJ?utm_source=share&utm_medium=member_desktop",
-      "title": "Top 3 Vue libraries",
-      "category": "articles"
-    },
-    {
-      "url": "https://www.linkedin.com/posts/domenico-tenace_nodejs-javascript-runtime-activity-7193913270070603778-OtBH?utm_source=share&utm_medium=member_desktop",
-      "title": "Node.js: the manual",
-      "category": "study"
-    },
-      {
-      "url": "https://www.linkedin.com/posts/domenico-tenace_scaffolding-a-vue-3-project-using-create-vue-activity-7196449985184333824-DGeM?utm_source=share&utm_medium=member_desktop",
-      "title": "My first article: the anniversary",
-      "category": "articles"
-    }
-
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_astrojs-frontenddev-javascript-activity-7185940741360078848-tTRI?utm_source=share&utm_medium=member_desktop",
+    "title": "Contributing file in Astro Minimal",
+    "category": "projects"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_vuejs-javascript-webdev-activity-7190984475680423936--vwJ?utm_source=share&utm_medium=member_desktop",
+    "title": "Top 3 Vue libraries",
+    "category": "articles"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_nodejs-javascript-runtime-activity-7193913270070603778-OtBH?utm_source=share&utm_medium=member_desktop",
+    "title": "Node.js: the manual",
+    "category": "study"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_scaffolding-a-vue-3-project-using-create-vue-activity-7196449985184333824-DGeM?utm_source=share&utm_medium=member_desktop",
+    "title": "My first article: the anniversary",
+    "category": "articles"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_astrojs-javascript-article-activity-7198986704517550081-J3sb?utm_source=share&utm_medium=member_desktop",
+    "title": "Astro layouts",
+    "category": "articles"
+  }
 ]
