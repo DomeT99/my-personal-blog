@@ -248,5 +248,10 @@
     "url": "https://www.linkedin.com/posts/domenico-tenace_astrojs-javascript-article-activity-7198986704517550081-J3sb?utm_source=share&utm_medium=member_desktop",
     "title": "Astro layouts",
     "category": "articles"
-  }
+  },
+    {
+      "url": "https://www.linkedin.com/posts/domenico-tenace_github-opensource-vue-activity-7204060134510075906-ggrs?utm_source=share&utm_medium=member_desktop",
+      "title": "App Repo: a playground for Nuxt",
+      "category": "projects"
+    }
 ]
