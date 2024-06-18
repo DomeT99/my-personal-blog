@@ -14,6 +14,7 @@ import * as vueWatcher from "./post/track-your-variables-watchers.mdx";
 import * as astroPages from "./post/the-wrappers-for-your-components-pages.mdx";
 import * as top3Library from "./post/top-3-vue-library-for-your-next-project.mdx";
 import * as astrolayouts from "./post/reusable-ui-structure-layout.mdx";
+import * as ossJavascript from "./post/seven-oss-projects-javascript-edition.mdx";
 
 export const posts = [
   computedProps,
@@ -32,4 +33,5 @@ export const posts = [
   astroPages,
   top3Library,
   astrolayouts,
+  ossJavascript,
 ];
