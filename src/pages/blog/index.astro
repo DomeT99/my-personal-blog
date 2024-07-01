@@ -17,18 +17,22 @@ posts.sort((a: any, b: any) => b.data.date - a.data.date);
     <div class="columns is-multiline">
       <div class="column is-12">
         {
-          posts.map((post) => (
-            <div class="mb-6 fade-in">
-              <BlogCard
-                title={post.data.title}
-                date={post.data.date}
-                description={post.data.description}
-                slug={"/blog/" + post.slug}
-                devLink={post.data.devLink}
-                mediumLink={post.data.mediumLink}
-              />
-            </div>
-          ))
+          posts
+            .filter(
+              (x) => x.data.date.getFullYear() > new Date().getFullYear() - 1
+            )
+            .map((post) => (
+              <div class="mb-6 fade-in">
+                <BlogCard
+                  title={post.data.title}
+                  date={post.data.date}
+                  description={post.data.description}
+                  slug={"/blog/" + post.slug}
+                  devLink={post.data.devLink}
+                  mediumLink={post.data.mediumLink}
+                />
+              </div>
+            ))
         }
       </div>
     </div>
