@@ -16,6 +16,7 @@ import * as top3Library from "./post/top-3-vue-library-for-your-next-project.mdx
 import * as astrolayouts from "./post/reusable-ui-structure-layout.mdx";
 import * as ossJavascript from "./post/seven-oss-projects-javascript-edition.mdx";
 import * as ossCSharp from "./post/seven-oss-projects-csharp-edition.mdx";
+import * as ossPHP from "./post/seven-oss-projects-php-edition.mdx";
 
 export const posts = [
   computedProps,
@@ -36,4 +37,5 @@ export const posts = [
   astrolayouts,
   ossJavascript,
   ossCSharp,
+  ossPHP,
 ];
