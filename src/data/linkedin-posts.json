@@ -264,9 +264,19 @@
     "title": "Open Source contributions: issues",
     "category": "open-source"
   },
-   {
-     "url": "https://www.linkedin.com/posts/domenico-tenace_github-opensource-article-activity-7212002462453407744-JUtd?utm_source=share&utm_medium=member_desktop",
-     "title": "7 OSS Projects: C# Edition",
-     "category": "articles"
-   }
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_github-opensource-article-activity-7212002462453407744-JUtd?utm_source=share&utm_medium=member_desktop",
+    "title": "7 OSS Projects: C# Edition",
+    "category": "articles"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_terzo-capitolo-della-serie-7-open-source-activity-7214158341495758848-e4Cg?utm_source=share&utm_medium=member_desktop",
+    "title": "7 OSS Projects: PHP Edition",
+    "category": "articles"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_github-opensource-vue-activity-7216743714046545921-p7Hf?utm_source=share&utm_medium=member_desktop",
+    "title": "Easy Kit Component: 0.2.0 release",
+    "category": "projects"
+  }
 ]
