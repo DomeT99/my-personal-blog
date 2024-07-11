@@ -7,6 +7,7 @@ const post = defineCollection({
     description: z.string(),
     devLink: z.string().url().optional(),
     mediumLink: z.string().url().optional(),
+    draft: z.boolean().default(false),
   }),
 });
 
