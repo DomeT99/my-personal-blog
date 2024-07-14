@@ -17,6 +17,7 @@ import * as astrolayouts from "./post/reusable-ui-structure-layout.mdx";
 import * as ossJavascript from "./post/seven-oss-projects-javascript-edition.mdx";
 import * as ossCSharp from "./post/seven-oss-projects-csharp-edition.mdx";
 import * as ossPHP from "./post/seven-oss-projects-php-edition.mdx";
+import * as ossJava from "./post/seven-oss-projects-java-edition.mdx";
 
 export const posts = [
   computedProps,
@@ -38,4 +39,5 @@ export const posts = [
   ossJavascript,
   ossCSharp,
   ossPHP,
+  ossJava,
 ];
