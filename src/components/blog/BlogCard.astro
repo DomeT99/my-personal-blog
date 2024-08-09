@@ -1,55 +1,37 @@
 ---
 import { Icon } from "astro-icon";
-import { getFormattedDate } from "../../utils/utils";
+import { getFormattedDate, getFormattedDescription } from "../../utils/utils";
 
 interface Props {
+  id: number;
   title: string;
-  date: Date;
   description: string;
-  devLink?: string;
-  mediumLink?: string;
-  slug?: string;
+  published_at: Date;
+  url: string;
 }
 
-const { title, date, description, slug, devLink, mediumLink } = Astro.props;
+const { id, title, description, published_at, url } = Astro.props;
 ---
 
-<div class="card min-18-vh">
+<div class="card min-18-vh" id={String(id)}>
   <div class="media-content has-text-left h-6">
     <h4 class="title is-size-4">
       {title}
     </h4>
     <p class="subtitle is-size-5 is-flex">
       <Icon class="mr-1" size={22} name="ion:time-outline" />
-      <time datetime={String(date)}> {getFormattedDate(date)}</time>
+      <time datetime={String(published_at)}>
+        {getFormattedDate(published_at)}</time
+      >
     </p>
-
     <div class="columns is-multiline">
       <div class="column is-12">
-        <p>{description}</p>
-      </div>
-      <div class="column is-2">
-        {
-          devLink !== undefined && (
-            <a href={devLink}>
-              {" "}
-              <Icon size={38} name="fa-brands:dev" />
-            </a>
-          )
-        }
-        {
-          mediumLink !== undefined && (
-            <a href={mediumLink}>
-              {" "}
-              <Icon size={38} name="fa-brands:medium" />
-            </a>
-          )
-        }
+        <p>{getFormattedDescription(description)}</p>
       </div>
     </div>
     <div class="columns">
       <div class="column is-12">
-        <a href={slug}><h6 class="primary-color">Read more</h6></a>
+        <a href={url}><h6 class="primary-color">Read more</h6></a>
       </div>
     </div>
   </div>

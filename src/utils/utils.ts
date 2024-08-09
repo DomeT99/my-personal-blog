@@ -1,9 +1,2 @@
-//Date
-const formatter = new Intl.DateTimeFormat("en", {
-  year: "numeric",
-  month: "short",
-  day: "numeric",
-  timeZone: "UTC",
-});
-
-export const getFormattedDate = (date: Date) => formatter.format(date);
+ export const getFormattedDate = (date: Date) => date.toString().split("T")[0];
+ export const getFormattedDescription = (desc: string) => desc.slice(10, 100);

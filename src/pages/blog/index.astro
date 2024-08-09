@@ -1,11 +1,16 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogCard from "../../components/blog/BlogCard.astro";
-import { fetchCollection } from "../../utils/blog";
-import { fade } from "astro:transitions";
+import { getBlogPost } from "../../utils/blog";
+import type { DevToPost } from "../../types/types";
 
-const posts = await fetchCollection();
-posts.sort((a: any, b: any) => b.data.date - a.data.date);
+const response = await getBlogPost()
+  .then((res) => res.json())
+  .then((res) => res);
+
+const posts = (await Promise.all(response)).filter(
+  (x) => new Date(x.published_at).getFullYear() > new Date().getFullYear() - 1
+) as unknown as DevToPost[];
 ---
 
 <BaseLayout
@@ -18,24 +23,17 @@ posts.sort((a: any, b: any) => b.data.date - a.data.date);
     <div class="columns is-multiline">
       <div class="column is-12">
         {
-          posts
-            .filter(
-              (x) =>
-                x.data.date.getFullYear() > new Date().getFullYear() - 1 &&
-                x.data.draft !== true
-            )
-            .map((post) => (
-              <div class="mb-6 fade-in">
-                <BlogCard
-                  title={post.data.title}
-                  date={post.data.date}
-                  description={post.data.description}
-                  slug={"/blog/" + post.slug}
-                  devLink={post.data.devLink}
-                  mediumLink={post.data.mediumLink}
-                />
-              </div>
-            ))
+          posts.map((post) => (
+            <div class="mb-6 fade-in">
+              <BlogCard
+                id={post.id}
+                title={post.title}
+                description={post.description}
+                published_at={post.published_at}
+                url={post.url}
+              />
+            </div>
+          ))
         }
       </div>
     </div>

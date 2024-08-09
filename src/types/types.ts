@@ -23,3 +23,10 @@ export type GitHubRepository = {
   stargazers_count: number;
   language: string;
 };
+export type DevToPost = {
+  id: number;
+  title: string;
+  description: string;
+  published_at: Date;
+  url: string;
+};

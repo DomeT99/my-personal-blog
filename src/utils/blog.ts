@@ -1,3 +1,7 @@
-import { getCollection } from "astro:content";
-
-export const fetchCollection = async () => (await getCollection("post"));
+export async function getBlogPost() {
+  return fetch(import.meta.env.DEVTO_URL, {
+    headers: {
+      'api-key': `${import.meta.env.DEVTO_TOKEN}`, 
+    },
+  });
+}
