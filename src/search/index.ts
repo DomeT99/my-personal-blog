@@ -5,11 +5,10 @@ import getPostsDB from "./posts";
 export const blogDB = await getBlogDB();
 export const postsDB = await getPostsDB();
 
-
 export default async function (term: string) {
   const result = [];
 
-  for (let db of [blogDB, postsDB]) {
+  for (let db of [postsDB]) {
     result.push({
       id: db.instance.id,
       output: search(db.instance, {

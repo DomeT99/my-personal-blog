@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogCard from "../../components/blog/BlogCard.astro";
+import SetLocalStorage from "../../components/common/SetLocalStorage.vue";
 import { getBlogPost } from "../../utils/blog";
 import type { DevToPost } from "../../types/types";
 
@@ -15,7 +16,7 @@ const posts = (await Promise.all(response)).filter(
 
 <BaseLayout
   pageTitle="Blog"
-  pageDescription="I write articles about the technologies I use the most"
+  pageDescription="I write articles about the technologies I use the most and share my experiences!"
   heroTitle="Blog"
   heroDescription="I write articles about the technologies I use the most and share my experiences!"
 >
@@ -37,5 +38,6 @@ const posts = (await Promise.all(response)).filter(
         }
       </div>
     </div>
+    <SetLocalStorage name={"blogPosts"} value={posts} client:load />
   </section>
 </BaseLayout>
