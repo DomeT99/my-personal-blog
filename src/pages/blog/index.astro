@@ -3,14 +3,15 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogCard from "../../components/blog/BlogCard.astro";
 import SetLocalStorage from "../../components/common/SetLocalStorage.vue";
 import { getBlogPost } from "../../utils/blog";
+import { filterDate } from "../../utils/utils";
 import type { DevToPost } from "../../types/types";
 
 const response = await getBlogPost()
   .then((res) => res.json())
   .then((res) => res);
 
-const posts = (await Promise.all(response)).filter(
-  (x) => new Date(x.published_at).getFullYear() > new Date().getFullYear() - 1
+const posts = (await Promise.all(response)).filter((x) =>
+  filterDate(new Date(x.published_at), 9)
 ) as unknown as DevToPost[];
 ---
 
