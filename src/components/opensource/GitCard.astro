@@ -19,11 +19,9 @@ const { id, full_name, html_url, description } = Astro.props;
         <Icon size={32} name="fa-brands:github" />
       </div>
       <div class="column is-9-desktop is-7-mobile mt-1">
-        <a href={html_url}>
-          <h6 class="is-size-10-desktop is-size-6-tablet is-size-6-mobile">
-            {full_name}
-          </h6>
-        </a>
+        <h6 class="is-size-10-desktop is-size-6-tablet is-size-6-mobile">
+          {full_name}
+        </h6>
       </div>
     </div>
 
@@ -31,4 +29,9 @@ const { id, full_name, html_url, description } = Astro.props;
       <p>{description}</p>
     </div>
   </div>
+  <footer class="card-footer">
+    <a href={html_url}>
+      <Icon class="ml-1 mr-1 mt-4" size={28} name="ph:link-bold" />
+    </a>
+  </footer>
 </div>
