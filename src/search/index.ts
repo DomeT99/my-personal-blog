@@ -8,7 +8,7 @@ export const postsDB = await getPostsDB();
 export default async function (term: string) {
   const result = [];
 
-  for (let db of [postsDB]) {
+  for (let db of [postsDB, blogDB]) {
     result.push({
       id: db.instance.id,
       output: search(db.instance, {

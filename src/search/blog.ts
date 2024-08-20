@@ -1,12 +1,11 @@
 import { create, insert } from "@orama/orama";
-import { posts } from "../content";
+import posts from "../data/blog-posts.json";
 
 export default async function fill() {
   const blogDB = await create({
     id: "blog",
     schema: {
       title: "string",
-      date: "string",
       description: "string",
       url: "string",
     } as const,
@@ -14,11 +13,9 @@ export default async function fill() {
 
   for (const post of posts) {
     await insert(blogDB, {
-      title: post.frontmatter.title,
-      date: post.frontmatter.date,
-      description: post.frontmatter.description,
-      url:
-        "/blog/" + post.url.split("src/content/post/").pop().split(".mdx")[0],
+      title: post.title,
+      description: post.description,
+      url: post.url,
     });
   }
 
