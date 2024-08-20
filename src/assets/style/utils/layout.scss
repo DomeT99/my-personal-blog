@@ -16,6 +16,9 @@
 .min-25-vh {
   min-height: 23vh;
 }
+.min-70-vh {
+  min-height: 70vh;
+}
 .min-100-vh {
   min-height: 100vh;
 }
@@ -26,12 +29,7 @@
 .w-100 {
   width: 100%;
 }
-
-//COLUMN
-.columns {
-  margin: 0;
-}
-
+ 
 @media all and (min-width: 768px) { 
   ol, ul {
     padding-left: 1.75rem;
