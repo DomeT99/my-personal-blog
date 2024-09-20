@@ -28,5 +28,10 @@
     "title": "Open Source",
     "description": "Open Source and everything related to it",
     "slug": "open-source"
+  },
+  {
+    "title": "Other",
+    "description": "Generic LinkedIn posts",
+    "slug": "other"
   }
 ]
