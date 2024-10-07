@@ -344,9 +344,14 @@
     "title": "Hacktoberfest 2024 is here!",
     "category": "articles"
   },
-   {
-     "url": "https://www.linkedin.com/posts/domenico-tenace_opensource-astro-articles-activity-7246429064184446977-iMYt?utm_source=share&utm_medium=member_desktop",
-     "title": "New project: open source diary!",
-     "category": "articles"
-   }
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_opensource-astro-articles-activity-7246429064184446977-iMYt?utm_source=share&utm_medium=member_desktop",
+    "title": "New project: open source diary!",
+    "category": "articles"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_opensource-github-italianprojects-activity-7248935832034627584-efXX?utm_source=share&utm_medium=member_desktop",
+    "title": "7 OSS Projects: Italian Edition",
+    "category": "articles"
+  }
 ]
