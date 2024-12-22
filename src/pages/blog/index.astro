@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogCard from "../../components/blog/BlogCard.astro";
-import SetLocalStorage from "../../components/common/SetLocalStorage.vue";
 import { getBlogPost } from "../../utils/blog";
 import { filterDate } from "../../utils/utils";
 import type { DevToPost } from "../../types/types";
@@ -39,6 +38,5 @@ const posts = (await Promise.all(response)).filter((x) =>
         }
       </div>
     </div>
-    <SetLocalStorage name={"blogPosts"} value={posts} client:load />
   </section>
 </BaseLayout>
