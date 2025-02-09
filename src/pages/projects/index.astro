@@ -1,7 +1,7 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro"; 
-import ProjectsCard from "../../components/projects/ProjectsCard.astro";
-import projects from "../../data/projects.json";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CategoryCard from "../../components/common/CategoryCard.astro";
+import projectsCategories from "../../data/projects-categories.json";
 ---
 
 <BaseLayout
@@ -12,15 +12,13 @@ import projects from "../../data/projects.json";
 >
   <section class="columns is-multiline mx-auto mt-6 mb-6">
     {
-      projects.map((project) => {
+      projectsCategories.map((category) => {
         return (
           <div class="column is-one-third-desktop is-6-tablet fade-in">
-            <ProjectsCard
-              title={project.title}
-              description={project.description}
-              url={project.url}
-              technologiesTags={project.technologiesTags}
-              githubRepository={project.githubRepository}
+            <CategoryCard
+              title={category.title}
+              description={category.description}
+              slug={`/projects/${category.slug}`}
             />
           </div>
         );

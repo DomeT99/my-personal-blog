@@ -1,21 +1,21 @@
 [
   {
-    "name": "Web Apps",
+    "title": "Web Apps",
     "description": "Progetti relativi allo sviluppo di siti web e applicazioni web.",
     "slug": "web-apps"
   },
   {
-    "name": "Wordpress websites",
+    "title": "Wordpress websites",
     "description": "Progetti relativi all'analisi dei dati e machine learning.",
     "slug": "websites"
   },
   {
-    "name": "Templates",
+    "title": "Templates",
     "description": "Progetti relativi allo sviluppo di applicazioni mobili.",
     "slug": "templates"
   },
   {
-    "name": "Libraries",
+    "title": "Libraries",
     "description": "Progetti relativi allo sviluppo di giochi.",
     "slug": "libraries"
   }

@@ -1,26 +1,46 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectsCard from "../../components/projects/ProjectsCard.astro";
+import projectsCategories from "../../data/projects-categories.json";
 import projects from "../../data/projects.json";
+
+const { slug } = Astro.params;
+
+export const getStaticPaths = () => {
+  return projectsCategories.map((category) => ({
+    params: {
+      slug: category.slug,
+    },
+  }));
+};
+
+const category = projectsCategories.find((category) => category.slug === slug);
+
+if (!category) {
+  return {
+    status: 404,
+  };
+}
+const posts = projects.filter((post) => post.type === category.slug).reverse();
 ---
 
-<BaseLayout
-  pageTitle="Projects"
-  pageDescription="This section is dedicated to my personal projects!"
-  heroTitle="Projects"
-  heroDescription="This section is dedicated to my personal projects!"
->
+<BaseLayout pageTitle={category.title} pageDescription={category.description}>
+  <section class="mt-6 mb-6">
+    <a class="quinary-color is-size-6-mobile ml-4" href="/projects"
+      >👈&nbsp;<u class="is-size-6-mobile">Back</u></a
+    >
+  </section>
   <section class="columns is-multiline mx-auto mt-6 mb-6">
     {
-      projects.map((project) => {
+      posts.map((post) => {
         return (
           <div class="column is-one-third-desktop is-6-tablet fade-in">
             <ProjectsCard
-              title={project.title}
-              description={project.description}
-              url={project.url}
-              technologiesTags={project.technologiesTags}
-              githubRepository={project.githubRepository}
+              title={post.title}
+              description={post.description}
+              url={post.url}
+              technologiesTags={post.technologiesTags}
+              githubRepository={post.githubRepository}
             />
           </div>
         );

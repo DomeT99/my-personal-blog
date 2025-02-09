@@ -29,13 +29,10 @@ const posts = linkedinPosts
   .reverse();
 ---
 
-<BaseLayout
-  pageTitle={category.title}
-  pageDescription={category.description}
->
-  <section class="container mt-6 mb-6">
+<BaseLayout pageTitle={category.title} pageDescription={category.description}>
+  <section class="mt-6 mb-6">
     <a class="quinary-color is-size-6-mobile ml-4" href="/linkedin"
-      >👈&nbsp;<u class="is-size-6-mobile">Return to categories</u></a
+      >👈&nbsp;<u class="is-size-6-mobile">Back</u></a
     >
   </section>
   <section class="has-text-centered mt-6">
