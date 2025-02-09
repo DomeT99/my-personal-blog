@@ -3,39 +3,45 @@
     "title": "Ella Ink Piercer - Tattoo and Piercing",
     "description": "Showcase site created for a professional body artist in the area. The project was created using the popular CMS WordPress.",
     "technologiesTags": ["WordPress"],
-    "url": "https://ellainkpiercer.it/"
+    "url": "https://ellainkpiercer.it/",
+    "type": "websites"
   },
   {
     "title": "Astro Minimal 😎",
     "description": "Astro Minimal is an open source blog template designed and developed using Astro and the Bulma CSS framework 🚀",
     "technologiesTags": ["Astro", "JavaScript", "TypeScript"],
     "url": "https://demo-astro-minimal.netlify.app/",
-    "githubRepository": "https://github.com/DomeT99/astro-minimal"
+    "githubRepository": "https://github.com/DomeT99/astro-minimal",
+    "type": "templates"
   },
   {
     "title": "Easy Kit Component 🛠",
     "description": "Easy Kit Component is a simple components kit designed for Vue 3 application!",
     "technologiesTags": ["Vue", "JavaScript", "TypeScript"],
     "url": "https://easykitcomponent.netlify.app/",
-    "githubRepository": "https://github.com/DomeT99/easy-kit-component"
+    "githubRepository": "https://github.com/DomeT99/easy-kit-component",
+    "type": "libraries"
   },
   {
     "title": "Alex Hantari - From my mind to your eyes",
     "description": "Showcase site created for a professional photographer and art director. The project was created using the popular CMS WordPress.",
     "technologiesTags": ["WordPress"],
-    "url": "https://alexhantari.it/"
+    "url": "https://alexhantari.it/",
+    "type": "websites"
   },
   {
     "title": "App Repo",
     "description": "Simple toolbox for store your favourite applications 📦",
     "technologiesTags": ["TypeScript", "Nuxt", "Firebase"],
     "url": "https://demo-app-repo.netlify.app/",
-    "githubRepository": "https://github.com/DomeT99/app-repo"
+    "githubRepository": "https://github.com/DomeT99/app-repo",
+    "type": "web-apps"
   },
   {
     "title": "Easy Kit Utils 🦾",
     "description": "Simple JavaScript kit for common utils!",
     "technologiesTags": ["TypeScript"],
-    "githubRepository": "https://github.com/DomeT99/easy-kit-utils"
+    "githubRepository": "https://github.com/DomeT99/easy-kit-utils",
+    "type": "libraries"
   }
 ]
