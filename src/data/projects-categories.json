@@ -1,22 +1,22 @@
 [
   {
     "title": "Web Apps",
-    "description": "Progetti relativi allo sviluppo di siti web e applicazioni web.",
+    "description": "Projects related to the development of web applications",
     "slug": "web-apps"
   },
   {
     "title": "Wordpress websites",
-    "description": "Progetti relativi all'analisi dei dati e machine learning.",
+    "description": "Projects related to the development of websites using the CMS Wordpress",
     "slug": "websites"
   },
   {
     "title": "Templates",
-    "description": "Progetti relativi allo sviluppo di applicazioni mobili.",
+    "description": "Projects related to the development of usable templates",
     "slug": "templates"
   },
   {
     "title": "Libraries",
-    "description": "Progetti relativi allo sviluppo di giochi.",
+    "description": "Projects related to the development of reusable and integrable libraries in software projects",
     "slug": "libraries"
   }
 ]
