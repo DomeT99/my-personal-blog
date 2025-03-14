@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from 'astro-icon/components'
 
 interface Props {
   title: string;
@@ -43,7 +43,7 @@ const { title, url, description, technologiesTags, githubRepository } =
     {
       githubRepository && (
         <a href={githubRepository}>
-          <Icon class="ml-1 mr-1 mt-4" size={28} name="fa-brands:github" />
+          <Icon class="ml-1 mr-1 mt-4" size={28} name="fa6-brands:github" />
         </a>
       )
     }

@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from 'astro-icon/components'
 
 interface Props {
   posts: {
@@ -19,7 +19,7 @@ const { posts } = Astro.props;
         {
           posts.map((post) => (
             <li class="mt-4">
-              <Icon size={24} name="fa-brands:linkedin" />
+              <Icon size={24} name="fa6-brands:linkedin" />
               <a class="is-size-6-mobile" href={post.url}>
                 {post.title}
               </a>

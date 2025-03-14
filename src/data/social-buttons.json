@@ -1,18 +1,18 @@
 [
   {
-    "icon": "fa-brands:linkedin",
+    "icon": "fa6-brands:linkedin",
     "url": "https://www.linkedin.com/in/domenico-tenace/"
   },
   {
-    "icon": "fa-brands:github",
+    "icon": "fa6-brands:github",
     "url": "https://github.com/DomeT99"
   },
   {
-    "icon": "fa-brands:dev",
+    "icon": "fa6-brands:dev",
     "url": "https://dev.to/dvalin99"
   },
   {
-    "icon": "fa-brands:medium-m",
-    "url": "https://medium.com/@domenicotenace"
+    "icon": "fa6-brands:bluesky",
+    "url": "https://bsky.app/profile/dvalin99.bsky.social"
   }
 ]
