@@ -14,12 +14,12 @@
     "@iconify-json/gg": "^1.2.2",
     "@iconify-json/ph": "^1.2.2",
     "@iconify-json/ri": "^1.2.5",
-    "@orama/orama": "^3.1.7",
-    "astro": "^5.7.12",
-    "astro-icon": "^1.1.5",
-    "astro-seo": "^0.8.4",
-    "bulma": "^1.0.4",
-    "sass": "^1.87.0",
-    "vue": "^3.5.13"
+    "@orama/orama": "^3.1.10",
+    "astro": "^5.11.0",
+    "astro-icon": "^1.1.0",
+    "astro-seo": "^0.8.0",
+    "bulma": "^1.0.0",
+    "sass": "^1.89.2",
+    "vue": "^3.5.17"
   }
 }
