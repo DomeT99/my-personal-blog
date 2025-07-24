@@ -1,21 +1,21 @@
 html[data-theme="light"] {
-  --primary-color: #ffa500;
+  --primary-color: #ff892d;
   --secondary-color: #ffc862;
   --tertiary-color: #1f1f1f;
   --quaternary-color: #303030;
   --quinary-color: #646464;
-  --neutral-color-one: #000;
+  --neutral-color-one: #1e1e2b;
   --neutral-color-two: #fff;
 }
 
 html[data-theme="dark"] {
-  --primary-color: #ffa500;
+  --primary-color: #ff892d;
   --secondary-color: #ffc862;
   --tertiary-color: #fff;
   --quaternary-color: #c0c0c0;
   --quinary-color: #c0c0c0;
   --neutral-color-one: #fff;
-  --neutral-color-two: #000;
+  --neutral-color-two: #1e1e2b;
 }
 
 $primary: var(--primary-color);
