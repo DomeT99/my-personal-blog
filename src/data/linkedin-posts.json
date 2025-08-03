@@ -538,12 +538,13 @@
     "url": "https://www.linkedin.com/posts/domenico-tenace_youtubeshorts-coding-opensource-activity-7341045516241100800-9lWU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEexTIBh1VJe9e60XGmJFXzudESVyEi2DU",
     "title": "Uno Platform is on YouTube",
     "category": "projects"
-  },  
+  },
   {
     "url": "https://www.linkedin.com/posts/domenico-tenace_youtubeshorts-coding-opensource-activity-7343946128968552448-5Wb4?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEexTIBh1VJe9e60XGmJFXzudESVyEi2DU",
     "title": "Tauri is on YouTube",
     "category": "projects"
-  },  {
+  },
+  {
     "url": "https://www.linkedin.com/posts/domenico-tenace_youtube-devto-article-activity-7344303530637234179-FESv?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEexTIBh1VJe9e60XGmJFXzudESVyEi2DU",
     "title": "I've launched a YouTube channel: the article",
     "category": "articles"
@@ -568,7 +569,7 @@
     "title": "Firebase Project Setup: Your Complete Getting Started Guide",
     "category": "articles"
   },
-   {
+  {
     "url": "https://www.linkedin.com/posts/domenico-tenace_youtubeshorts-coding-opensource-activity-7353725626878504960-CjHC?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEexTIBh1VJe9e60XGmJFXzudESVyEi2DU",
     "title": "Lit is on YouTube",
     "category": "projects"
@@ -577,5 +578,10 @@
     "url": "https://www.linkedin.com/posts/domenico-tenace_firebase-google-backend-activity-7355545983763496960-VYpb?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEexTIBh1VJe9e60XGmJFXzudESVyEi2DU",
     "title": "Firebase Authentication: Your Complete Getting Started Guide",
     "category": "articles"
+  },
+  {
+    "url": "https://www.linkedin.com/posts/domenico-tenace_youtubeshorts-coding-opensource-activity-7356247494651002880-gpZB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADEexTIBh1VJe9e60XGmJFXzudESVyEi2DU",
+    "title": "Odoo is on YouTube",
+    "category": "projects"
   }
 ]
