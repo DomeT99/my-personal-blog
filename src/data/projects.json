@@ -33,7 +33,7 @@
     "title": "App Repo",
     "description": "Simple toolbox for store your favourite applications 📦",
     "technologiesTags": ["TypeScript", "Nuxt", "Firebase"],
-    "url": "https://demo-app-repo.netlify.app/",
+    "url": "https://app-repo.netlify.app/",
     "githubRepository": "https://github.com/DomeT99/app-repo",
     "type": "web-apps"
   },
