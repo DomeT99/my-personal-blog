@@ -43,5 +43,12 @@
     "technologiesTags": ["TypeScript"],
     "githubRepository": "https://github.com/DomeT99/easy-kit-utils",
     "type": "libraries"
+  },
+  {
+    "title": "Glif",
+    "description": "Minimalist and intuitive web app for creating and managing QR Codes ✳️",
+    "technologiesTags": ["Nuxt", "TypeScript"],
+    "githubRepository": "https://github.com/DomeT99/glif",
+    "type": "web-apps"
   }
 ]
