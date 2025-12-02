@@ -11,7 +11,7 @@
     "description": "Astro Minimal is an open source blog template designed and developed using Astro and the Bulma CSS framework 🚀",
     "technologiesTags": ["Astro", "JavaScript", "TypeScript"],
     "url": "https://demo-astro-minimal.netlify.app/",
-    "githubRepository": "https://github.com/DomeT99/astro-minimal",
+    "githubRepository": "https://github.com/Domenico-Tenace-Open-Labs/astro-minimal",
     "type": "templates"
   },
   {
@@ -19,7 +19,7 @@
     "description": "Easy Kit Component is a simple components kit designed for Vue 3 application!",
     "technologiesTags": ["Vue", "JavaScript", "TypeScript"],
     "url": "https://easykitcomponent.netlify.app/",
-    "githubRepository": "https://github.com/DomeT99/easy-kit-component",
+    "githubRepository": "https://github.com/Domenico-Tenace-Open-Labs/easy-kit-component",
     "type": "libraries"
   },
   {
@@ -34,21 +34,21 @@
     "description": "Simple toolbox for store your favourite applications 📦",
     "technologiesTags": ["TypeScript", "Nuxt", "Firebase"],
     "url": "https://app-repo.netlify.app/",
-    "githubRepository": "https://github.com/DomeT99/app-repo",
+    "githubRepository": "https://github.com/Domenico-Tenace-Open-Labs/app-repo",
     "type": "web-apps"
   },
   {
     "title": "Easy Kit Utils 🦾",
     "description": "Simple JavaScript kit for common utils!",
     "technologiesTags": ["TypeScript"],
-    "githubRepository": "https://github.com/DomeT99/easy-kit-utils",
+    "githubRepository": "https://github.com/Domenico-Tenace-Open-Labs/easy-kit-utils",
     "type": "libraries"
   },
   {
     "title": "Glif",
     "description": "Minimalist and intuitive web app for creating and managing QR Codes ✳️",
     "technologiesTags": ["Nuxt", "TypeScript"],
-    "githubRepository": "https://github.com/DomeT99/glif",
+    "githubRepository": "https://github.com/Domenico-Tenace-Open-Labs/glif",
     "type": "web-apps"
   }
 ]
